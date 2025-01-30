@@ -460,7 +460,10 @@ def async_remove_map_cameras(
 
 class DreameVacuumCameraEntity(DreameVacuumEntity, Camera):
     """Defines a Dreame Vacuum Camera entity."""
-
+    _webrtc_provider = None
+    _legacy_webrtc_provider = None
+    _supports_native_sync_webrtc = False
+    _supports_native_async_webrtc = False
     _unrecorded_attributes = frozenset(CAMERA_UNRECORDED_ATTRIBUTES)
 
     def __init__(
