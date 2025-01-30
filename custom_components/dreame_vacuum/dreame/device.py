@@ -7029,7 +7029,7 @@ class DreameVacuumDeviceStatus:
                             .replace("_", " ")
                             .capitalize()
                         )
-                    if history.neglected_segments:
+                    if history.neglected_segments is not None:
                         list[date][ATTR_NEGLECTED_SEGMENTS] = {
                             k: v.name.replace("_", " ").capitalize() for k, v in history.neglected_segments.items()
                         }
